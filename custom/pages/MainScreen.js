@@ -10,54 +10,87 @@ export default class MainScreen extends Component{
 		return (
 			<View style={mainStyles.outside}>
 				<View style={mainStyles.navbar}>
-					<Text style={mainStyles.navbarText}><Icon name="bars" size={20} color="#fff" /></Text>
+					<Text style={mainStyles.navbarText}><Icon name="bars" size={20} color="#f0c100" /></Text>
 					<Image style={mainStyles.logo} source={logo}/>
-					<Text style={mainStyles.navbarText}><Icon name="comment" size={20} color="#fff" /></Text>
+					<Text style={mainStyles.navbarText}><Icon name="comment" size={20} color="#f0c100" /></Text>
 				</View>
 				<ScrollView style={mainStyles.scrollView}>
 					<View style={mainStyles.bottomView}>
 						<View style={mainStyles.parentView}>
-							<Image style={mainStyles.userImage} source={userImage} />
+							<View style={mainStyles.images}>
+								<View style={mainStyles.blackFilter}></View>
+								<Text style={mainStyles.username}>Name</Text>
+								<Image style={mainStyles.userImage} source={userImage} />
+							</View>
 							<View style={mainStyles.bottomIcons}>
-								<TouchableHighlight onclick><Icon name="heart" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
-								<TouchableHighlight><Icon name="comment" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
 							</View>
 						</View>
 						<View style={mainStyles.parentView}>
 							<Image style={mainStyles.userImage} source={userImage} />
 							<View style={mainStyles.bottomIcons}>
-								<TouchableHighlight><Icon name="heart" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
-								<TouchableHighlight><Icon name="comment" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
 							</View>
 						</View>
 						<View style={mainStyles.parentView}>
 							<Image style={mainStyles.userImage} source={userImage} />
 							<View style={mainStyles.bottomIcons}>
-								<TouchableHighlight><Icon name="heart" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
-								<TouchableHighlight><Icon name="comment" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
 							</View>
 						</View>
 						<View style={mainStyles.parentView}>
 							<Image style={mainStyles.userImage} source={userImage} />
 							<View style={mainStyles.bottomIcons}>
-								<TouchableHighlight><Icon name="heart" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
-								<TouchableHighlight><Icon name="comment" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
 							</View>
 						</View>
 						<View style={mainStyles.parentView}>
 							<Image style={mainStyles.userImage} source={userImage} />
 							<View style={mainStyles.bottomIcons}>
-								<TouchableHighlight><Icon name="heart" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
-								<TouchableHighlight><Icon name="comment" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
 							</View>
 						</View>
 						<View style={mainStyles.parentView}>
 							<Image style={mainStyles.userImage} source={userImage} />
 							<View style={mainStyles.bottomIcons}>
-								<TouchableHighlight><Icon name="heart" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
-								<TouchableHighlight><Icon name="comment" size={30} color="#fff" style={{padding: 20}}/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
 							</View>
 						</View>
+						<View style={mainStyles.parentView}>
+							<Image style={mainStyles.userImage} source={userImage} />
+							<View style={mainStyles.bottomIcons}>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
+								<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
+							</View>
+						</View>
+						<View style={mainStyles.parentView}>
+							<Image style={mainStyles.userImage} source={userImage} />
+							<View style={mainStyles.bottomIcons}>
+								<TouchableHighlight><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
+								<TouchableHighlight><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
+							</View>
+						</View>
+						<View style={mainStyles.parentView}>
+							<Image style={mainStyles.userImage} source={userImage} />
+							<View style={mainStyles.bottomIcons}>
+								<TouchableHighlight><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
+								<TouchableHighlight><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
+							</View>
+						</View>
+						<View style={mainStyles.parentView}>
+							<Image style={mainStyles.userImage} source={userImage} />
+							<View style={mainStyles.bottomIcons}>
+								<TouchableHighlight><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
+								<TouchableHighlight><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
+							</View>
+						</View>
+
 					</View>
 				</ScrollView>
 			</View>
@@ -72,34 +105,35 @@ var mainStyles = StyleSheet.create({
 	},
 	navbar: {
 		backgroundColor: 'black',
-		padding: 30,
 		flexDirection: 'row',
 		justifyContent: 'space-around'
 	},
 	navbarText: {
-		color: '#ffffff'
+		padding: 20,
+		flex: 1,
+		color: '#ffffff',
+		backgroundColor: '#1a1b1c'
 	},
 	logo: {
-		height: 35,
+		flex: 12,
+		marginTop: 10,
+		height: 40,
 		resizeMode: 'contain'
 	},
 	bottomView: {
 		flexWrap: 'wrap',
 		alignItems: 'flex-start',
-		padding: 30,
 		flexDirection: 'row',
 		justifyContent: 'space-around'
 	},
 	parentView: {
-		width: 250,
 		backgroundColor: 'black',
-		padding: 30,
 		paddingBottom: 0,
-		margin: 10
+		margin: 10,
 	},
 	userImage: {
-		width: 190,
-		height: 200,
+		width: 160,
+		height: 160, 
 		resizeMode: 'cover'
 	},
 	scrollView: {
@@ -108,5 +142,28 @@ var mainStyles = StyleSheet.create({
 	bottomIcons: {
 		flexDirection: 'row',
 		justifyContent: 'space-around'
+	},
+	images: {
+		position: 'relative'
+	},
+	userButton: {
+		padding: 30
+	},
+	username: {
+		color: '#fff',
+		zIndex: 3,
+		bottom: 0,
+		position: 'absolute',
+		padding: 10
+	},
+	blackFilter: {
+		position: 'absolute',
+		backgroundColor: '#0007',
+		top: 0,
+		left: 0,
+		width: 160,
+		height: 160,
+		flex: 1,
+		zIndex: 2
 	}
 });
