@@ -9,34 +9,41 @@ export default class DrawerContent extends Component {
 	render(){
 		var userImage = require('../resources/user.jpg');
 		return (
-			<View style={styles.drawerMain}>
-				<View style={styles.drawerChildren}>
-					<Icon name="home" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Home</Text>
+			<ScrollView>
+				<View style={styles.drawerMain}>
+					<View style={styles.drawerChildren}>
+						<Icon name="home" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Home</Text>
+					</View>
+					<View style={styles.drawerChildren}>
+						<Icon name="user" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Profile</Text>
+					</View>
+					<View style={styles.drawerChildren}>
+						<Icon name="cog" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Settings</Text>
+					</View>
+					<View style={styles.drawerChildren}>
+						<Icon name="envelope" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Invite Friends</Text>
+					</View>
+					<View style={styles.drawerChildren}>
+						<Text style={{color: "#f0c100", fontSize: 20}}>NOTIFICATIONS</Text>
+					</View>
+					<View style={styles.notificationStyle}>
+						<View style={styles.dateView}><Text style={{color: "#f0c10099"}}>21 May, 2016</Text></View>
+						<Image source={userImage} style={styles.userPhoto}/><Text style={{color: "#f0c100", paddingLeft: 20, paddingTop: 10, paddingRight: 20}}>Angelina Jolie sent you a message.</Text>
+					</View>
+					<View style={styles.notificationStyle}>
+						<View style={styles.dateView}><Text style={{color: "#f0c10099"}}>21 May, 2016</Text></View>
+						<Image source={userImage} style={styles.userPhoto}/><Text style={{color: "#f0c100", paddingLeft: 20, paddingTop: 10, paddingRight: 20}}>Angelina Jolie sent you a message.</Text>
+					</View>
+					<View style={styles.notificationStyle}>
+						<View style={styles.dateView}><Text style={{color: "#f0c10099"}}>21 May, 2016</Text></View>
+						<Image source={userImage} style={styles.userPhoto}/><Text style={{color: "#f0c100", paddingLeft: 20, paddingTop: 10, paddingRight: 20}}>Angelina Jolie sent you a message.</Text>
+					</View>
+					<View style={styles.notificationStyle}>
+						<View style={styles.dateView}><Text style={{color: "#f0c10099"}}>21 May, 2016</Text></View>
+						<Image source={userImage} style={styles.userPhoto}/><Text style={{color: "#f0c100", paddingLeft: 20, paddingTop: 10, paddingRight: 20}}>Angelina Jolie sent you a message.</Text>
+					</View>
 				</View>
-				<View style={styles.drawerChildren}>
-					<Icon name="user" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Profile</Text>
-				</View>
-				<View style={styles.drawerChildren}>
-					<Icon name="cog" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Settings</Text>
-				</View>
-				<View style={styles.drawerChildren}>
-					<Icon name="envelope" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Invite Friends</Text>
-				</View>
-				<View style={styles.drawerChildren}>
-					<Text style={{color: "#f0c100", fontSize: 20}}>NOTIFICATIONS</Text>
-				</View>
-				<ScrollView>
-				<View style={styles.notificationStyle}>
-					<View style={styles.dateView}><Text style={{color: "#f0c10099"}}>21 May, 2016</Text></View>
-					<Image source={userImage} style={styles.userPhoto}/><Text style={{color: "#f0c100", paddingLeft: 10, paddingTop: 10}}>Angelina Jolie sent you a message.</Text>
-				</View>
-				<View style={styles.notificationStyle}>
-					<View style={styles.dateView}><Text style={{color: "#f0c10099"}}>21 May, 2016</Text></View>
-					<Image source={userImage} style={styles.userPhoto}/><Text style={{color: "#f0c100", paddingLeft: 10, paddingTop: 10}}>Angelina Jolie sent you a message.</Text>
-				</View>
-				</ScrollView>
-			</View>
-
+			</ScrollView>
 		);
 
 	}
@@ -45,7 +52,6 @@ export default class DrawerContent extends Component {
 var styles = StyleSheet.create({
 	drawerMain: {
 		backgroundColor: "black",
-		color: "white",
 		flex: 1,
 		paddingTop: 20,
 	},
@@ -70,7 +76,7 @@ var styles = StyleSheet.create({
 	dateView: {
 		position: "absolute",
 		top: 10,
-		right: 10
+		right: 50
 	},
 	userPhoto: {
 		width: 50,

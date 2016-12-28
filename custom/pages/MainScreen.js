@@ -14,6 +14,7 @@ export default class MainScreen extends Component{
 				ref={(ref) => {this._drawer = ref}}
 				content={<DrawerContent />}
 				tapToClose={true}
+				panOpenMask= {300}
 				tweenHandler={Drawer.tweenPresets.parallax}
 				openDrawerOffset={0.2}
 				styles={{backgroundColor: 'black'}} >
@@ -22,7 +23,7 @@ export default class MainScreen extends Component{
 					<View style={mainStyles.navbar}>
 						<TouchableHighlight onPress={ () => {this._drawer.open(); }}><Text style={mainStyles.navbarText}><Icon name="bars" size={20} color="#f0c100" /></Text></TouchableHighlight>
 						<Image style={mainStyles.logo} source={logo}/>
-						<View style={mainStyles.navbarText}><View style={mainStyles.messageNumber}><Text style={{color: "white", fontSize: 10}}>100</Text></View><Icon name="comment" size={20} color="#f0c100" /></View>
+						<View style={mainStyles.navbarText}><View style={mainStyles.messageNumber}><Text style={{color: "white", fontSize: 12}}>99+</Text></View><Icon name="comment" size={20} color="#f0c100" /></View>
 					</View>
 					<ScrollView style={mainStyles.scrollView}>
 						<View style={mainStyles.bottomView}>
@@ -225,7 +226,6 @@ var mainStyles = StyleSheet.create({
 		padding: 20,
 		position: "relative",
 		flex: 1,
-		color: '#ffffff',
 		backgroundColor: '#1a1b1c'
 	},
 	messageNumber: {
@@ -233,7 +233,6 @@ var mainStyles = StyleSheet.create({
 		left: 30,
 		top: 10,
 		zIndex: 2,
-		padding: 5,
 		borderRadius: 100,
 		backgroundColor: "red"
 	},
