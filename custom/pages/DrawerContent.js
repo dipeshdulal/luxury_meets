@@ -1,28 +1,40 @@
 import React, { Component } from 'react';
 import {
-	View, StyleSheet, Text, Image, ScrollView
+	View, StyleSheet, Text, Image, ScrollView, TouchableHighlight
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default class DrawerContent extends Component {
+	drawerButtonPress(self, sourceScreen, destinationScreen){
+		if(sourceScreen != destinationScreen)
+			self.props.navigator.push({id: destinationScreen});
+	}
 	render(){
 		var userImage = require('../resources/user.jpg');
 		return (
-			<ScrollView>
+			<ScrollView style={{backgroundColor: "black"}}>
 				<View style={styles.drawerMain}>
+					<TouchableHighlight onPress={() => { this.drawerButtonPress(this, this.props.screen, "MainScreen")}}>
 					<View style={styles.drawerChildren}>
 						<Icon name="home" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Home</Text>
 					</View>
+					</TouchableHighlight>
+					<TouchableHighlight onPress={() => { this.drawerButtonPress(this, this.props.screen, "Profiles") }}>
 					<View style={styles.drawerChildren}>
 						<Icon name="user" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Profile</Text>
 					</View>
+					</TouchableHighlight>
+					<TouchableHighlight onPress={() => { this.drawerButtonPress(this, this.props.screen, "Preferences") }}>
 					<View style={styles.drawerChildren}>
-						<Icon name="cog" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Settings</Text>
+						<Icon name="cog" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Preferences</Text>
 					</View>
+					</TouchableHighlight>
+					<TouchableHighlight onPress={() => { this.drawerButtonPress(this, this.props.screen, "InviteFriends") }}>
 					<View style={styles.drawerChildren}>
 						<Icon name="envelope" size={30} style={styles.iconStyle}/><Text style={{color: "#f0c100", fontSize: 20}}>Invite Friends</Text>
 					</View>
+					</TouchableHighlight>
 					<View style={styles.drawerChildren}>
 						<Text style={{color: "#f0c100", fontSize: 20}}>NOTIFICATIONS</Text>
 					</View>
@@ -52,8 +64,8 @@ export default class DrawerContent extends Component {
 var styles = StyleSheet.create({
 	drawerMain: {
 		backgroundColor: "black",
-		flex: 1,
 		paddingTop: 20,
+
 	},
 	drawerChildren: {
 		flexDirection: 'row',

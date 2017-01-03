@@ -3,8 +3,14 @@ import { Text, Image, ScrollView, View, StyleSheet, TouchableHighlight } from 'r
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Drawer from 'react-native-drawer';
 import DrawerContent from './DrawerContent';
+import MessageDrawerContent from './MessageDrawerContent';
+
 // splash screen display componens
 export default class MainScreen extends Component{
+
+	constructor(props){
+		super(props);
+	}
 
 	render(){
 		var logo = require('../resources/logo.png');
@@ -12,19 +18,28 @@ export default class MainScreen extends Component{
 		return (
 			<Drawer 
 				ref={(ref) => {this._drawer = ref}}
-				content={<DrawerContent />}
+				content={<DrawerContent navigator={this.props.navigator} screen="MainScreen"/>}
 				tapToClose={true}
 				panOpenMask= {300}
 				tweenHandler={Drawer.tweenPresets.parallax}
 				openDrawerOffset={0.2}
 				styles={{backgroundColor: 'black'}} >
-
+				<Drawer 
+					ref={(ref) => {this._drawer1 = ref}}
+					content={<MessageDrawerContent navigator={this.props.navigator}/>}
+					tapToClose={true}
+					side="right"
+					panOpenMask= {300}
+					tweenHandler={Drawer.tweenPresets.parallax}
+					openDrawerOffset={0.2}
+					styles={{backgroundColor: 'black'}} >
 				<View style={mainStyles.outside}>
 					<View style={mainStyles.navbar}>
 						<TouchableHighlight onPress={ () => {this._drawer.open(); }}><Text style={mainStyles.navbarText}><Icon name="bars" size={20} color="#f0c100" /></Text></TouchableHighlight>
 						<Image style={mainStyles.logo} source={logo}/>
-						<View style={mainStyles.navbarText}><View style={mainStyles.messageNumber}><Text style={{color: "white", fontSize: 12}}>99+</Text></View><Icon name="comment" size={20} color="#f0c100" /></View>
+						<TouchableHighlight onPress={() => {this._drawer1.open(); }}><View style={mainStyles.navbarTextView}><View style={mainStyles.messageNumber}><Text style={{color: "white", fontSize: 12, padding: 2}}>9+</Text></View><Icon name="comment" size={20} color="#f0c100" /></View></TouchableHighlight>
 					</View>
+					<View style={{flex: 1}}>
 					<ScrollView style={mainStyles.scrollView}>
 						<View style={mainStyles.bottomView}>
 							<View style={mainStyles.parentView}>
@@ -206,7 +221,9 @@ export default class MainScreen extends Component{
 							
 						</View>
 					</ScrollView>
+					</View>
 				</View>
+				</Drawer>
 			</Drawer>
 		);
 	}
@@ -222,9 +239,14 @@ var mainStyles = StyleSheet.create({
 		flexDirection: 'row',
 		justifyContent: 'space-around'
 	},
+	navbarTextView: {
+		position: "relative",
+		padding: 20,
+		flex: 1,
+		backgroundColor: '#1a1b1c'		
+	},
 	navbarText: {
 		padding: 20,
-		position: "relative",
 		flex: 1,
 		backgroundColor: '#1a1b1c'
 	},
@@ -238,8 +260,10 @@ var mainStyles = StyleSheet.create({
 	},
 	logo: {
 		flex: 12,
+		marginTop: 15,
+		marginBottom: 15,
 		marginTop: 10,
-		height: 40,
+		height: 45,
 		resizeMode: 'contain'
 	},
 	bottomView: {
@@ -254,8 +278,8 @@ var mainStyles = StyleSheet.create({
 		margin: 10,
 	},
 	userImage: {
-		width: 160,
-		height: 160, 
+		width: 120,
+		height: 120, 
 		resizeMode: 'cover'
 	},
 	scrollView: {
@@ -269,7 +293,7 @@ var mainStyles = StyleSheet.create({
 		position: 'relative'
 	},
 	userButton: {
-		padding: 30
+		padding: 10
 	},
 	username: {
 		color: '#fff',
@@ -283,8 +307,8 @@ var mainStyles = StyleSheet.create({
 		backgroundColor: '#0007',
 		top: 0,
 		left: 0,
-		width: 160,
-		height: 160,
+		width: 120,
+		height: 120,
 		flex: 1,
 		zIndex: 2
 	}

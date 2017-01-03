@@ -1,17 +1,36 @@
 import React, { Component } from 'react';
-import { Navigator } from 'react-native';
+import { Navigator, Text } from 'react-native';
 import SplashScreen from './pages/SplashScreen.js';
 import MainScreen from './pages/MainScreen.js';
+import Profiles from './pages/Profiles.js';
+import InviteFriends from './pages/InviteFriends.js';
+import Preferences from './pages/Preferences.js';
 
 export default class Root extends Component {
-
+	
 	constructor(props){
 		super(props);
 	}
 
 	renderScene(route, navigator){
 		console.log(route);
-		return <MainScreen navigator={navigator} />
+		switch(route.id){
+			case "SplashScreen":
+				return <SplashScreen navigator={navigator} />
+				break;
+			case "MainScreen":
+				return <MainScreen navigator={navigator} />
+				break;
+			case "Profiles":
+				return <Profiles navigator={navigator} />
+				break;
+			case "InviteFriends":
+				return <InviteFriends navigator={navigator} />
+				break;
+			case "Preferences":
+				return <Preferences navigator={navigator} />
+				break;
+		}
 	}
 
 	render(){
@@ -20,9 +39,9 @@ export default class Root extends Component {
 				initialRoute= {{id: 'SplashScreen'}}
 				renderScene={this.renderScene}
 				configureScene={(route, routeStack) => {
-					Navigator.SceneConfigs.FloatFromBottom;
-				}}
-			/>
+					return Navigator.SceneConfigs.FadeAndroid
+				} }
+				/>
 
 		);
 	}
