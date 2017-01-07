@@ -5,7 +5,6 @@ import Drawer from 'react-native-drawer';
 import DrawerContent from './DrawerContent';
 import MessageDrawerContent from './MessageDrawerContent';
 
-
 export default class InviteFriends extends Component {
 
 
@@ -13,14 +12,7 @@ export default class InviteFriends extends Component {
 		var logo = require('../resources/logo.png');
 		var userImage = require('../resources/user.jpg');
 		return (
-			<Drawer 
-				ref={(ref) => {this._drawer = ref}}
-				content={<DrawerContent navigator={this.props.navigator} screen="Profiles"/>}
-				tapToClose={true}
-				panOpenMask= {300}
-				tweenHandler={Drawer.tweenPresets.parallax}
-				openDrawerOffset={0.2}
-				styles={{backgroundColor: 'black'}} >
+			
 				<Drawer 
 					ref={(ref) => {this._drawer1 = ref}}
 					content={<MessageDrawerContent navigator={this.props.navigator}/>}
@@ -32,11 +24,11 @@ export default class InviteFriends extends Component {
 					styles={{backgroundColor: 'black'}} >
 				<View style={mainStyles.outside}>
 					<View style={mainStyles.navbar}>
-						<TouchableHighlight onPress={ () => {this._drawer.open(); }}><Text style={mainStyles.navbarText}><Icon name="bars" size={20} color="#f0c100" /></Text></TouchableHighlight>
+						<TouchableHighlight onPress={ () => {this.props.navigator.pop(); }}><Text style={mainStyles.navbarText}><Icon name="chevron-left" size={20} color="#f0c100" /></Text></TouchableHighlight>
 						<Text style={mainStyles.logo}>Invite Friends</Text>
 						<TouchableHighlight onPress={() => {this._drawer1.open(); }}><View style={mainStyles.navbarTextView}><View style={mainStyles.messageNumber}><Text style={{color: "white", fontSize: 12, padding: 2}}>9+</Text></View><Icon name="comment" size={20} color="#f0c100" /></View></TouchableHighlight>
 					</View>
-					<View style={{flex: 1, backgroundColor: "black"}}>
+					<View style={{flex: 1, backgroundColor: "#292a2b"}}>
 					<ScrollView style={mainStyles.scrollView}>
 						<View style={mainStyles.bottomView}>
 							<Text style={{color: "#f0c100", paddingTop: 30, paddingBottom: 30, fontSize: 50, textAlign: "center"}}>Invite Friends</Text>
@@ -50,7 +42,6 @@ export default class InviteFriends extends Component {
 					</View>
 				</View>
 				</Drawer>
-			</Drawer>
 			);
 	}
 }
@@ -70,6 +61,9 @@ var mainStyles = StyleSheet.create({
 		padding: 20,
 		flex: 1,
 		backgroundColor: '#1a1b1c'		
+	},
+	scrollView: {
+		backgroundColor: "#292a2b"
 	},
 	navbarText: {
 		padding: 20,
@@ -96,7 +90,7 @@ var mainStyles = StyleSheet.create({
 	},
 	bottomView: {
 		flex: 1,
-		backgroundColor: "black",
+		backgroundColor: "#292a2b",
 		flexWrap: 'wrap',
 		alignItems: 'center',
 		flexDirection: 'column',

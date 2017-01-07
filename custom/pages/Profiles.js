@@ -14,29 +14,21 @@ export default class Profiles extends Component {
 		var userImage = require('../resources/user.jpg');
 		return (
 			<Drawer 
-				ref={(ref) => {this._drawer = ref}}
-				content={<DrawerContent navigator={this.props.navigator} screen="Profiles"/>}
+				ref={(ref) => {this._drawer1 = ref}}
+				content={<MessageDrawerContent navigator={this.props.navigator}/>}
 				tapToClose={true}
+				side="right"
 				panOpenMask= {300}
 				tweenHandler={Drawer.tweenPresets.parallax}
 				openDrawerOffset={0.2}
 				styles={{backgroundColor: 'black'}} >
-				<Drawer 
-					ref={(ref) => {this._drawer1 = ref}}
-					content={<MessageDrawerContent navigator={this.props.navigator}/>}
-					tapToClose={true}
-					side="right"
-					panOpenMask= {300}
-					tweenHandler={Drawer.tweenPresets.parallax}
-					openDrawerOffset={0.2}
-					styles={{backgroundColor: 'black'}} >
 				<View style={mainStyles.outside}>
 					<View style={mainStyles.navbar}>
-						<TouchableHighlight onPress={ () => {this._drawer.open(); }}><Text style={mainStyles.navbarText}><Icon name="bars" size={20} color="#f0c100" /></Text></TouchableHighlight>
+						<TouchableHighlight onPress={ () => {this.props.navigator.pop(); }}><Text style={mainStyles.navbarText}><Icon name="chevron-left" size={20} color="#f0c100" /></Text></TouchableHighlight>
 						<Text style={mainStyles.logo}>My Profile</Text>
 						<TouchableHighlight onPress={() => {this._drawer1.open(); }}><View style={mainStyles.navbarTextView}><View style={mainStyles.messageNumber}><Text style={{color: "white", fontSize: 12, padding: 2}}>9+</Text></View><Icon name="comment" size={20} color="#f0c100" /></View></TouchableHighlight>
 					</View>
-					<View style={{flex: 1, backgroundColor: "black"}}>
+					<View style={{flex: 1, backgroundColor: "#292a2b"}}>
 					<ScrollView style={mainStyles.scrollView}>
 						<View style={mainStyles.bottomView}>
 							<Image resizeMode="cover" source={userImage} style={mainStyles.userImage} />
@@ -59,7 +51,6 @@ export default class Profiles extends Component {
 					</ScrollView>
 					</View>
 				</View>
-				</Drawer>
 			</Drawer>
 			);
 	}
@@ -106,7 +97,7 @@ var mainStyles = StyleSheet.create({
 	},
 	bottomView: {
 		flex: 1,
-		backgroundColor: "black",
+		backgroundColor: "#292a2b",
 		flexWrap: 'wrap',
 		alignItems: 'flex-start',
 		flexDirection: 'column',
