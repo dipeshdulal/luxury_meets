@@ -6,21 +6,10 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class DrawerContent extends Component {
 
+	
 	drawerButtonPress(self, sourceScreen, destinationScreen){
 		if(sourceScreen != destinationScreen)
 			self.props.navigator.push({id: destinationScreen});
-	}
-
-	endEditing(self, evt){
-		// here is the value send it to parent
-		// let val = this.state.text;
-		let val = this.state.text;
-		this.props.editCallback(val);
-	}
-
-	constructor(props){
-		super(props);
-		this.state = {text: ""}
 	}
 
 	render(){
@@ -40,11 +29,8 @@ export default class DrawerContent extends Component {
 							</Picker>
 						</View>*/}
 						<TextInput
-							ref="search_value"
 							style={styles.luxuryMeetsSearch}
 							placeholder="Search Luxury Meets"
-							onChangeText={(text) => this.setState({text})}
-							onSubmitEditing={(event) => { this.endEditing(this, event) }}
 						/>
 						<View style={{position: "absolute", right: 20, top: 15}}>
 							<Icon name="search" size={30} style={{color: "#333"}} />
