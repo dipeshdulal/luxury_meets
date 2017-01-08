@@ -10,6 +10,7 @@ export default class Root extends Component {
 	
 	constructor(props){
 		super(props);
+		this.myValue = "Hello";
 	}
 
 	renderScene(route, navigator){

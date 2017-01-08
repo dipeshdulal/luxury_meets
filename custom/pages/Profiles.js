@@ -4,10 +4,17 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Drawer from 'react-native-drawer';
 import DrawerContent from './DrawerContent';
 import MessageDrawerContent from './MessageDrawerContent';
-
+import ProfileComponent from '../sub_component/ProfileComponent';
 
 export default class Profiles extends Component {
 
+	likePress(val){
+		console.log(val);
+	}
+
+	messagePress(){
+		console.log("messagePress");
+	}
 
 	render(){
 		var logo = require('../resources/logo.png');
@@ -30,24 +37,14 @@ export default class Profiles extends Component {
 					</View>
 					<View style={{flex: 1, backgroundColor: "#292a2b"}}>
 					<ScrollView style={mainStyles.scrollView}>
-						<View style={mainStyles.bottomView}>
-							<Image resizeMode="cover" source={userImage} style={mainStyles.userImage} />
-							<View style={{flex: 1, flexDirection: "row"}}>
-								<Text style={{color: "#f0c100", flex: 0.5, fontSize: 30, padding: 20}}>Angelina, 40</Text>
-								<View style={mainStyles.heartComment}>
-									<Icon name="heart" size={30} style={{color: "#f0c100"}}/>
-								</View>
-								<View style={mainStyles.heartComment}>
-									<Icon name="comment" size={30} style={{color: "#f0c100"}}/>
-								</View>
-							</View>
-							<View>
-								<Text style={{color: "#f0c100", padding: 20, fontSize: 18}}>About Me:</Text>
-								<Text style={{color: "#ffffff88", paddingLeft: 20, fontSize: 14, textAlign: "justify", lineHeight: 30}}>Angelina Jolie Pitt (/dʒoʊˈliː/ joh-lee; née Voight; born June 4, 1975)[1] is an American actress, filmmaker, and humanitarian. She has received an Academy Award, two Screen Actors Guild Awards, and three Golden Globe Awards, and has been cited as Hollywood's highest-paid actress. Jolie made her screen debut as a child alongside her father, Jon Voight, in Lookin' to Get Out (1982).</Text>
-								<Text style={{color: "#f0c100", padding: 20, fontSize: 18}}>Work:</Text>
-								<Text style={{color: "#fff8", paddingLeft: 20, fontSize: 14, textAlign: "justify", lineHeight: 30}}>Actor, Model</Text>
-							</View>
-						</View>
+						<ProfileComponent 
+							userImage={userImage}
+							username="Angelina"
+							age={18}
+							about="Something about me"
+							work="Something about work"
+							likePressCallback={this.likePress.bind(this)}
+							messagePressCallback={this.messagePress.bind(this)}/>
 					</ScrollView>
 					</View>
 				</View>
