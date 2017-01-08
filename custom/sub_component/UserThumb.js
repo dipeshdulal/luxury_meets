@@ -22,7 +22,7 @@ export default class UserThumb extends Component {
 		}else{
 			this.setState({pressed: true});
 		}
-		this.props.likeButtonCallback(!this.state.pressed);
+		this.props.likeButtonCallback(!this.state.pressed, this.props.userid);
 	}
 
 	// handling message button press

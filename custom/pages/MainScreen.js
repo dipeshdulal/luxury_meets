@@ -4,12 +4,22 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Drawer from 'react-native-drawer';
 import DrawerContent from './DrawerContent';
 import MessageDrawerContent from './MessageDrawerContent';
+import UserThumb from '../sub_component/UserThumb';
 
 // splash screen display componens
 export default class MainScreen extends Component{
 
 	constructor(props){
 		super(props);
+	}
+
+	likeButton(v, id){
+		console.log(v);
+		console.log(id);
+	}
+
+	commentButton(){
+		console.log("Comment button clicked");
 	}
 
 	render(){
@@ -42,182 +52,19 @@ export default class MainScreen extends Component{
 					<View style={mainStyles.scrollParent}>
 						<ScrollView style={mainStyles.scrollView}>
 							<View style={mainStyles.bottomView}>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
-								<View style={mainStyles.parentView}>
-									<View style={mainStyles.images}>
-										<View style={mainStyles.blackFilter}></View>
-										<Text style={mainStyles.username}>Name</Text>
-										<Image style={mainStyles.userImage} source={userImage} />
-									</View>
-									<View style={mainStyles.bottomIcons}>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="heart" size={20} color="#f0c100"/></TouchableHighlight>
-										<TouchableHighlight onPress={this.userButtonPress}><Icon style={mainStyles.userButton} name="comment" size={20} color="#f0c100"/></TouchableHighlight>
-									</View>
-								</View>
+								<UserThumb
+									userid={1}
+									username="Angelina Jolie"
+									imageSource={userImage}
+									likeButtonCallback={this.likeButton.bind(this)}
+									messageButtonCallback={this.commentButton.bind(this)} />
+								
+								<UserThumb
+									userid={2}
+									username="Angelina Jolie"
+									imageSource={userImage}
+									likeButtonCallback={this.likeButton.bind(this)}
+									messageButtonCallback={this.commentButton.bind(this)} />
 								
 							</View>
 						</ScrollView>
