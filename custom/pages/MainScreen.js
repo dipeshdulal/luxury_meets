@@ -6,6 +6,7 @@ import DrawerContent from './DrawerContent';
 import MessageDrawerContent from './MessageDrawerContent';
 import UserThumb from '../sub_component/UserThumb';
 
+
 // splash screen display componens
 export default class MainScreen extends Component{
 
@@ -14,12 +15,15 @@ export default class MainScreen extends Component{
 	}
 
 	likeButton(v, id){
-		console.log(v);
 		console.log(id);
 	}
 
 	commentButton(){
 		console.log("Comment button clicked");
+	}
+
+	searchCallback(val){
+		this._drawer.close();
 	}
 
 	render(){
@@ -28,12 +32,13 @@ export default class MainScreen extends Component{
 		return (
 			<Drawer 
 				ref={(ref) => {this._drawer = ref}}
-				content={<DrawerContent navigator={this.props.navigator} screen="MainScreen"/>}
+				content={<DrawerContent navigator={this.props.navigator} screen="MainScreen" searchCallback={this.searchCallback.bind(this)}/>}
 				tapToClose={true}
 				panOpenMask= {300}
 				tweenHandler={Drawer.tweenPresets.parallax}
 				openDrawerOffset={0.2}
 				styles={{backgroundColor: 'black'}} >
+				
 				<Drawer 
 					ref={(ref) => {this._drawer1 = ref}}
 					content={<MessageDrawerContent navigator={this.props.navigator}/>}
@@ -43,6 +48,7 @@ export default class MainScreen extends Component{
 					tweenHandler={Drawer.tweenPresets.parallax}
 					openDrawerOffset={0.2}
 					styles={{backgroundColor: 'black'}} >
+				
 				<View style={mainStyles.outside}>
 					<View style={mainStyles.navbar}>
 						<TouchableHighlight onPress={ () => {this._drawer.open(); }}><Text style={mainStyles.navbarText}><Icon name="bars" size={20} color="#f0c100" /></Text></TouchableHighlight>
@@ -52,6 +58,7 @@ export default class MainScreen extends Component{
 					<View style={mainStyles.scrollParent}>
 						<ScrollView style={mainStyles.scrollView}>
 							<View style={mainStyles.bottomView}>
+								
 								<UserThumb
 									userid={1}
 									username="Angelina Jolie"
@@ -59,6 +66,13 @@ export default class MainScreen extends Component{
 									likeButtonCallback={this.likeButton.bind(this)}
 									messageButtonCallback={this.commentButton.bind(this)} />
 								
+								<UserThumb
+									userid={2}
+									username="Angelina Jolie"
+									imageSource={userImage}
+									likeButtonCallback={this.likeButton.bind(this)}
+									messageButtonCallback={this.commentButton.bind(this)} />
+					
 								<UserThumb
 									userid={2}
 									username="Angelina Jolie"

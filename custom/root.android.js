@@ -38,9 +38,7 @@ export default class Root extends Component {
 			<Navigator 
 				initialRoute= {{id: 'SplashScreen'}}
 				renderScene={this.renderScene}
-				configureScene={(route, routeStack) => {
-					return Navigator.SceneConfigs.FadeAndroid
-				} }
+				
 				/>
 
 		);

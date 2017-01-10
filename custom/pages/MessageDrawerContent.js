@@ -4,57 +4,73 @@ import {
 	ScrollView, Image,
 	View, Text, StyleSheet
 } from 'react-native';
-
+import Swipeout from 'react-native-swipeout';
+import MessageItem from '../sub_component/MessageItem';
+import MessageItems from '../sub_component/MessageItems';
 
 export default class MessageDrawerContent extends Component{
+
+	// get the message data from server and then store in the state
+
+	constructor(p){
+		super(p);
+		this.swipeoutButtons = [
+			{ 
+				text: 'Delete',
+				backgroundColor: '#ed2121'
+			}
+		];
+		var userImage = require('../resources/user.jpg');
+		this.state = {
+			data: [
+				{ 
+					id: 1,
+					userImage: userImage,
+					messageType: "active",
+					sender: "Angelina Jolie",
+					message: "Hey Darling",
+					date: "12 May 2016, 12:00 PM"
+				},
+				{ 
+					id: 2,
+					userImage: userImage,
+					sender: "Angelina Jolie",
+					message: "Hey Darling",
+					date: "12 May 2016, 12:00 PM"
+				},
+			]
+		};
+	}
+
+	// id of the delete pressed element
+	deletePress(id){
+		var dat = [];
+		for(var i = 0; i < this.state.data.length; i++){
+			// loop through all the data memeber
+			if(id == this.state.data[i].id){
+				continue;
+			}
+			dat.push(this.state.data[i]);
+		}
+		this.setState({data: dat});
+	}
+
 	render(){
 		var userImage = require('../resources/user.jpg');
+		var message;
+		if(this.state.data.length == 0){
+			// there are no messages
+			message = <Text style={styles.headingText}>There are no messages</Text>;
+		}else{
+			message = <MessageItems items={this.state.data} deletePressCallback={this.deletePress.bind(this)}/>; 
+		}
+
 		return (
 			<ScrollView style={{backgroundColor: "black"}}>
 				<View>
 					<Text style={styles.headingText}>MESSAGES</Text>
 				</View>		
-				<View style={styles.messageViewActive}>
-					<View style={styles.date}>
-						<Text style={styles.dateText}>May 21</Text>
-					</View>
-					<Image source={userImage} style={styles.profileImage}/>
-					<View>
-						<Text style={styles.usernameStyle}>Username</Text>
-						<Text style={styles.messageStyle}>Hey Darling :-)</Text>
-					</View>
-				</View>
-				<View style={styles.messageView}>
-					<View style={styles.date}>
-						<Text style={styles.dateText}>May 21</Text>
-					</View>
-					<Image source={userImage} style={styles.profileImage}/>
-					<View>
-						<Text style={styles.usernameStyle}>Username</Text>
-						<Text style={styles.messageStyle}>Hey Darling :-)</Text>
-					</View>
-				</View>
-				<View style={styles.messageView}>
-					<View style={styles.date}>
-						<Text style={styles.dateText}>May 21</Text>
-					</View>
-					<Image source={userImage} style={styles.profileImage}/>
-					<View>
-						<Text style={styles.usernameStyle}>Username</Text>
-						<Text style={styles.messageStyle}>Hey Darling :-)</Text>
-					</View>
-				</View>
-				<View style={styles.messageView}>
-					<View style={styles.date}>
-						<Text style={styles.dateText}>May 21</Text>
-					</View>
-					<Image source={userImage} style={styles.profileImage}/>
-					<View>
-						<Text style={styles.usernameStyle}>Username</Text>
-						<Text style={styles.messageStyle}>Hey Darling :-)</Text>
-					</View>
-				</View>
-
+				{message}
 			</ScrollView>
 		);
 	}
@@ -66,51 +82,5 @@ var styles = StyleSheet.create({
 		padding: 20,
 		fontSize: 20, 
 		color: "#f0c100"
-	},
-	date: {
-		position: "absolute",
-		right: 10,
-		top: 10
-	},
-	dateText: {
-		color: "#f0c10022"
-	},
-	messageView: {
-		position: "relative",
-		paddingTop: 15,
-		paddingBottom: 10,
-		borderLeftWidth: 2,
-		paddingLeft: 20, 
-		backgroundColor: "#f0c10022",
-		flexDirection: "row"
-	},
-	messageViewActive: {
-		position: "relative",
-		paddingTop: 15,
-		paddingBottom: 10,
-		borderLeftColor: "#f0c100",
-		borderLeftWidth: 2,
-		paddingLeft: 20, 
-		backgroundColor: "#f0c10026",
-		flexDirection: "row"
-	},
-	profileImage: {
-		marginRight: 10,
-		height: 60,
-		width: 60,
-		borderRadius: 10,
-		borderWidth: 2,
-		borderColor: "#f0c100",
-		resizeMode: "cover" 
-	},
-	usernameStyle: {
-		fontSize: 15,
-		paddingBottom: 5,
-		color: "#f0c100"
-	},
-	messageStyle: {
-		color: "#f0c100"
 	}
-
-
 });

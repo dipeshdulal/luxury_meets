@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Text, View, StyleSheet, TouchableHighlight, Image, ScrollView, Dimensions, Button } from 'react-native';
+import { InteractionManager, Switch, Text, View, StyleSheet, TouchableHighlight, Image, ScrollView, Dimensions, Button } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Drawer from 'react-native-drawer';
 import DrawerContent from './DrawerContent';
@@ -22,7 +22,22 @@ export default class Preferences extends Component {
 			likes: true,
 			calls: true,
 			ageValue: [20,70],
+			placeholder: true
 		}
+	}
+	
+	_renderPlaceholder(){
+		return (
+				<View style={{backgroundColor: "#333", flex: 1, justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+					<Text style={{color: "white", textAlign: "center", fontSize: 16}}>LOADING...</Text>
+				</View>
+			);
+	}
+
+	componentDidMount(){
+		InteractionManager.runAfterInteractions(() => {
+			this.stateSetter(this, "placeholder", false);
+		});
 	}
 
 	stateSetter(self, type,bool){
@@ -39,6 +54,9 @@ export default class Preferences extends Component {
 	render(){
 		var logo = require('../resources/logo.png');
 		var userImage = require('../resources/user.jpg');
+		if(this.state.placeholder){
+			return this._renderPlaceholder();
+		}
 		return (
 			
 			<Drawer 

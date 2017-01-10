@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, TouchableHighlight, Image, ScrollView, Dimensions } from 'react-native';
+import { InteractionManager, Text, View, StyleSheet, TouchableHighlight, Image, ScrollView, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Drawer from 'react-native-drawer';
 import DrawerContent from './DrawerContent';
@@ -8,10 +8,31 @@ import MessageDrawerContent from './MessageDrawerContent';
 
 export default class Profiles extends Component {
 
+	constructor(props){
+		super(props);
+		this.state = {placeholder: true};
+	}
+
+	componentDidMount(){
+		InteractionManager.runAfterInteractions(() => {
+			this.setState({placeholder: false});
+		});
+	}
+
+	_renderPlaceholder(){
+		return (
+				<View style={{backgroundColor: "#333", flex: 1, justifyContent: "center", flexDirection: "column", alignItems: "center"}}>
+					<Text style={{color: "white", textAlign: "center", fontSize: 16}}>LOADING...</Text>
+				</View>
+			);	
+	}
 
 	render(){
 		var logo = require('../resources/logo.png');
 		var userImage = require('../resources/user.jpg');
+		if(this.state.placeholder){
+			return this._renderPlaceholder();
+		}
 		return (
 			<Drawer 
 				ref={(ref) => {this._drawer1 = ref}}

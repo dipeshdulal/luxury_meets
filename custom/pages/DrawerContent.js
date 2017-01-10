@@ -3,13 +3,25 @@ import {
 	View, StyleSheet, Text, Image, ScrollView, TouchableHighlight, Button, TextInput, Picker
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import NotificationItem from '../sub_component/NotificationItem';
 
 export default class DrawerContent extends Component {
 
-	
 	drawerButtonPress(self, sourceScreen, destinationScreen){
 		if(sourceScreen != destinationScreen)
 			self.props.navigator.push({id: destinationScreen});
+	}
+
+	constructor(props){
+		super(props);
+		this.state = {
+			text: ""
+		};
+	}
+
+	searchSubmit(){
+		let query = this.state.text;
+		this.props.searchCallback(query);
 	}
 
 	render(){
@@ -29,6 +41,8 @@ export default class DrawerContent extends Component {
 							</Picker>
 						</View>*/}
 						<TextInput
+							onChangeText={(text) => this.setState({text})}
+							onSubmitEditing={this.searchSubmit.bind(this)}
 							style={styles.luxuryMeetsSearch}
 							placeholder="Search Luxury Meets"
 						/>
@@ -66,6 +80,10 @@ export default class DrawerContent extends Component {
 							/>
 					</View>
 					<View>
+						<NotificationItem 
+							userImage = {userImage}
+							notification = "Angelina sent you a message"
+							date= "13 May, 2013. 1:00 PM"/>
 						<View style={styles.notificationStyle}>
 							<View style={styles.dateView}><Text style={{color: "#f0c10099"}}>21 May, 2016</Text></View>
 							<Image source={userImage} style={styles.userPhoto}/><Text style={{color: "#f0c100", paddingLeft: 20, paddingTop: 10, paddingRight: 20}}>Angelina Jolie sent you a message.</Text>
