@@ -5,7 +5,7 @@ import Drawer from 'react-native-drawer';
 import DrawerContent from './DrawerContent';
 import MessageDrawerContent from './MessageDrawerContent';
 import UserThumb from '../sub_component/UserThumb';
-
+import UserThumbs from '../sub_component/UserThumbs';
 
 // splash screen display componens
 export default class MainScreen extends Component{
@@ -13,12 +13,23 @@ export default class MainScreen extends Component{
 	constructor(props){
 		super(props);
 		this.state = {
+			userData : false,
 			thumbsLoading: true
 		}
+		this.props.facebookData.getAllUsers().then((response) => {
+			console.log(response);
+			this.setState({
+				userData: response,
+				thumbsLoading: false
+			});
+		}).catch(() => {
+			console.log("Promise Rejection 1");
+		});
+		
 	}
 
-	setState(key, val){
-		this.state.key = val;
+	stateSetter(key, val){
+		this.state[key] = val;
 		this.setState(this.state);
 	}
 
@@ -35,16 +46,20 @@ export default class MainScreen extends Component{
 	}
 
 	render(){
-		var loadingThumbs = ""; 
+		var loadingThumbs = null; 
+		var userData = null;
 		if(this.state.thumbsLoading){
 			loadingThumbs = <Text style={{color: "#f0c100", textAlign: "center", fontSize: 18, padding: 30}}>LOADING...</Text>
+		}
+		if(this.state.userData){
+			userData = <UserThumbs items={this.state.userData} />
 		}
 		var logo = require('../resources/logo.png');
 		var userImage = require('../resources/user.jpg');
 		return (
 			<Drawer 
 				ref={(ref) => {this._drawer = ref}}
-				content={<DrawerContent navigator={this.props.navigator} screen="MainScreen" searchCallback={this.searchCallback.bind(this)} facebookData={this.props.facebookData}/>}
+				content={<DrawerContent navigator={this.props.navigator} screen="MainScreen" searchCallback={this.searchCallback.bind(this)} facebookData={this.props.facebookData.getFBdata()}/>}
 				tapToClose={true}
 				panOpenMask= {80}
 				tweenHandler={Drawer.tweenPresets.parallax}
@@ -70,10 +85,7 @@ export default class MainScreen extends Component{
 					<View style={mainStyles.scrollParent}>
 						<ScrollView style={mainStyles.scrollView}>
 							{loadingThumbs}					
-							<View style={mainStyles.bottomView}>
-								
-								
-							</View>
+							{userData}
 						</ScrollView>
 					</View>
 				</View>

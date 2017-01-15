@@ -16,11 +16,6 @@ export default class Preferences extends Component {
 
 	constructor(props){
 		super(props);
-		fetch('http://graph.facebook.com')
-				.then((response) => response.json())
-				.then((responseJson) => {
-					console.log(responseJson);
-				});
 		this.state = {
 			male: true,
 			female: false,

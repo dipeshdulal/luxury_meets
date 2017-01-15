@@ -12,7 +12,14 @@ const {
 
 export default class User{
 
-	constructor(){
+	constructor(username = "", password = ""){
+		if(username != ""){
+			this.username = username;
+		}
+		if(password != ""){
+			this.accessToken = password;
+		}
+		this.userPage = 0;
 		this.userTokens = [];
 		this.userID;
 		this.accessToken;
@@ -25,6 +32,7 @@ export default class User{
 	}
 
 	_userResponseCallback(error: ?Object, result: ?Object){
+		console.log("hello");
 		console.log(error, result);
 		if(error){
 			alert("Sorry! Something went wrong. Please reopen the application.");
@@ -35,11 +43,6 @@ export default class User{
 			this.username = result.first_name + " " + result.last_name;
 			this.email = result.email;
 			this.age = recentYear - result.birthday.split("/")[2];
-
-			console.log()
-				
-			// after then callback run 
-			this.callback(this.getFBdata());
 
 			var fd = new FormData();
 
@@ -56,17 +59,20 @@ export default class User{
 				response.json()
 			).then((responseJSON) => {
 				// if verification code received
-				console.log(responseJSON);
 				if(responseJSON.verification_code){
 					this.verifyData(fd, responseJSON.verification_code);
 				}else if(responseJSON.error){
 					alert("Sorry! Something went wrong :-( . Please reopen the application.");
+				}else{
+					this.callback(this);
 				}
 
 			}).catch(() => {
 				console.log("fetch error");
 				alert("Sorry! Something went wrong :-( . Please reopen the application. There is problem we will fix this as soon as possible.");
 			});
+
+			
 
 		}
 	}
@@ -81,7 +87,8 @@ export default class User{
 			response.json()
 		).then((responseJSON) => {
 			// if success
-			console.log(responseJSON);
+			// after then callback run 
+			this.callback(this);
 			if(responseJSON.error){
 				alert("Sorry! Something went wrong :-( . Please reopen the application. There is a problem we will fix this as soon as possible.");
 			}
@@ -110,6 +117,7 @@ export default class User{
 		// use graphapi to fetch username and email 
 		AccessToken.getCurrentAccessToken().then(
 				(data) => {
+					console.log(data);
 					if(data){
 						this.userID = data.userID;
 						this.accessToken = data.accessToken;	
@@ -119,9 +127,6 @@ export default class User{
 					}
 				}
 		);
-
-
-
 
 		const infoRequest = new GraphRequest(
 			"/me?fields=id,name,email,picture.height(500),birthday, first_name,last_name, work, age_range, about",
@@ -133,6 +138,26 @@ export default class User{
 
 	}
 
+	// call this to populate the userdata from graph api
+	populateData(callback){
+		
+		const infoRequest = new GraphRequest(
+			"/me",
+			{
+				accessToken: this.accessToken,
+				parameters: {
+					fields : {
+						string: 'id,name,email,picture,birthday, first_name,last_name, work, age_range, about'
+					}
+				}
+			},
+			callback.bind(this)
+		);
+
+		new GraphRequestManager().addRequest(infoRequest).start();				
+
+	}
+
 	// function to get all the users and their data from facebook 
 	// render based on that
 	getAllUsers(){
@@ -140,9 +165,16 @@ export default class User{
 		// after accesstoken is received then set all the access tokens in 
 		// userTokens property after the data hasbeen received then 
 		// change the mainScreen state and re render the users
-		 
+		var fd = new FormData();
+		fd.append("token",this.accessToken);
+		fd.append("page", this.userPage);
+		fd.append("email", this.email);
+		return fetch(this.server+"get_all_users_ajax.php",{
+			method: "POST",
+			body: fd
+		}).then((response) => response.json()).catch(() => {
+			alert("Sorry! Something went wrong. Please reopen the application.");
+		});
 	}
-
-
 
 }

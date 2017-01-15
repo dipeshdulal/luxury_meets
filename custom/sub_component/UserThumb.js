@@ -55,8 +55,8 @@ var mainStyles = StyleSheet.create({
 		margin: 10,
 	},
 	userImage: {
-		width: 120,
-		height: 120, 
+		width: 130,
+		height: 130, 
 		resizeMode: 'cover'
 	},
 	bottomIcons: {
@@ -81,8 +81,8 @@ var mainStyles = StyleSheet.create({
 		backgroundColor: '#0007',
 		top: 0,
 		left: 0,
-		width: 120,
-		height: 120,
+		width: 130,
+		height: 130,
 		flex: 1,
 		zIndex: 2
 	}
