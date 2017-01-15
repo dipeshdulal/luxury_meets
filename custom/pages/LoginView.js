@@ -25,6 +25,7 @@ export default class LoginView extends Component {
 					var user = new User();
 					user.callback = this.callBackAfterLogin.bind(this);
 					user.login();
+					user.loginSuccessfull = this.callBackAfterLoginSuccessfull.bind(this);
 				}else{
 					this.setState({loadState: true});
 				}
@@ -34,6 +35,10 @@ export default class LoginView extends Component {
 
 	callBackAfterLogin(data){
 		this.props.navigator.resetTo({id: "MainScreen", user: data});
+	}
+
+	callBackAfterLoginSuccessfull(){
+		this.setState({loadState: false});
 	}
 
 	loginFinished(error, result){
@@ -46,6 +51,7 @@ export default class LoginView extends Component {
 				(data) => {
 					var user = new User();
 					user.callback = this.callBackAfterLogin.bind(this);
+					user.loginSuccessfull = this.callBackAfterLoginSuccessfull.bind(this);
 					user.login();
 				}
 			);
@@ -68,7 +74,7 @@ export default class LoginView extends Component {
 					<View style={styles.bottom}>
 						<View style={{paddingBottom: 50}}><Text style={{color: "white", fontSize: 18, textAlign: "center", lineHeight: 40}}>By logging in you agree to our <Text style={styles.bold}>terms of service</Text> and <Text style={styles.bold}>privacy policy.</Text> </Text></View>
 						<LoginButton
-				          readPermissions={["email", "user_hometown", "user_photos", "user_work_history"]}
+				          readPermissions={["email", "user_hometown", "user_birthday","user_photos", "user_work_history"]}
 				          onLoginFinished={this.loginFinished.bind(this)}
 				          onLogoutFinished={() => alert("logout.")}/>
 				          <View style={{padding: 20, flexDirection: "row"}}><View style={{paddingRight: 10}}><Icon name="info-circle" size={20} color="#fff"/></View><Text style={{color: "white"}}>We will never publish anything on Facebook</Text></View>

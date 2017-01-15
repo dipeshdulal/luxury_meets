@@ -12,6 +12,14 @@ export default class MainScreen extends Component{
 
 	constructor(props){
 		super(props);
+		this.state = {
+			thumbsLoading: true
+		}
+	}
+
+	setState(key, val){
+		this.state.key = val;
+		this.setState(this.state);
 	}
 
 	likeButton(v, id){
@@ -27,6 +35,10 @@ export default class MainScreen extends Component{
 	}
 
 	render(){
+		var loadingThumbs = ""; 
+		if(this.state.thumbsLoading){
+			loadingThumbs = <Text style={{color: "#f0c100", textAlign: "center", fontSize: 18, padding: 30}}>LOADING...</Text>
+		}
 		var logo = require('../resources/logo.png');
 		var userImage = require('../resources/user.jpg');
 		return (
@@ -57,133 +69,10 @@ export default class MainScreen extends Component{
 					</View>
 					<View style={mainStyles.scrollParent}>
 						<ScrollView style={mainStyles.scrollView}>
+							{loadingThumbs}					
 							<View style={mainStyles.bottomView}>
 								
-								<UserThumb
-									userid={1}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
 								
-								<UserThumb
-									userid={2}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-					
-								<UserThumb
-									userid={3}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-								
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
-
-								<UserThumb
-									userid={4}
-									username="Angelina Jolie"
-									imageSource={userImage}
-									likeButtonCallback={this.likeButton.bind(this)}
-									messageButtonCallback={this.commentButton.bind(this)} />
 							</View>
 						</ScrollView>
 					</View>
