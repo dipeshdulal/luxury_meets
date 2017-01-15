@@ -2,88 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="63994437f62bc861bc20c605d12962f7246116d1">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1-9223921dd89121bc407d01695c25cdda93d5167c.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/javax.inject-1-5ad9d7d8e98c624e3b79c2754ef3008f2036dd64.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-6157ba908b0e129554b7fef6eea81fd8cdce6c2f.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-e52b6e84c158109cae4dfe7d969782c55bdac8b0.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-e82f0a03f9443a9b44c8ac1762a33dc0ed523af9.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-6d0bd9ba8df03dd1012340aa9cd40dadb850d0a3.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.1-0048052b07e8700300ee40264d682ffa48bb7515.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0-f1aafd2870429aee3d7aa7f310a40eb23f5ec5e2.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.39.2/jars/libs/infer-annotations-1.5.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5268ed090600db4ceb72b055927f4f9cbd79465c">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-d196d734beeec272fcb9d3feca30e0a72f3d3a64.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.1-bd9bb61c3a19f90a431f68fdbdc8e61ca262c787.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-c471524d5ed7103fda3d27ab4eaea5d2c9ae6c01.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-e16d287d52e19ac6e73f18b2c6766120135807aa.jar" />
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0-4a7eead1d7868f26c941274798f03dfef34c538a.jar" />
     </item>
     <item
         jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/0.11.0/jars/classes.jar"
@@ -107,39 +30,18 @@
         <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/okhttp-ws-3.4.1-20e4c20095c28856f21ba990c39125243b18a260.jar" />
     </item>
     <item
+        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1-24ba2baf69d167d2e58ca90f54138b80191d18f3.jar" />
+    </item>
+    <item
         jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.39.2/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="035e9c4ef05bd4e0f34f48fbfb073f98fcf58af0">
         <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-ccbe32f88508614b638429fd2064da14e4c7c14d.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-45f2eb15fba1985906a62cf4707db119e3f893cb.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-de5e483e6b55b67c3ae679c7bf28f1d44c650e30.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/luxury_meets/react-native-vector-icons/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="5d6012df814283cd8a10ffab772f12e7fe835ec0">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-56a1f13a3e840649185a9d017077b5a5c88352ed.jar" />
-    </item>
-    <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
-        revision="23.0.1"
-        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-3e31eb376a03943f116e4e98ca70d523bbc9016b.jar" />
     </item>
     <item
         jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
@@ -149,18 +51,109 @@
         <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0-ac42058c481db99ac307d6b9ee6d5bc56bc79741.jar" />
     </item>
     <item
-        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1-24ba2baf69d167d2e58ca90f54138b80191d18f3.jar" />
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0-de5e483e6b55b67c3ae679c7bf28f1d44c650e30.jar" />
     </item>
     <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-fe604db89788a0d8f6e063604f3cfedadf296960.jar" />
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-45f2eb15fba1985906a62cf4707db119e3f893cb.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/luxury_meets/react-native-fbsdk/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d32bc5761f8669d4cf2fa6519be7bec1a0275d64">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-e50b1fceb182cb2c83219e2e99fa92df231c240a.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-applinks/1.4.0/8ad21bf21784dacce5f2043afb97218cc377e835/bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/bolts-applinks-1.4.0-052c9882db6f3fd7999d60aff5bcbb8b981fe1d5.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.android/facebook-android-sdk/4.18.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="43a08f2cc1bc8e9678b5a1740f3b91b50ab50ac6">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-33d0a908302f8623f62bc0bb0e8a9fcb74550979.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/luxury_meets/react-native-vector-icons/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5d6012df814283cd8a10ffab772f12e7fe835ec0">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-56a1f13a3e840649185a9d017077b5a5c88352ed.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0-b806551471b3580c10f14024285ac97fda81811a.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-3e31eb376a03943f116e4e98ca70d523bbc9016b.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-25d2f7207f72e4b64e76874a75a3f274d291cbb1.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d31aadf33187c37a7cd63dc1b769f8c6e33f78c3">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-e82f0a03f9443a9b44c8ac1762a33dc0ed523af9.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-767531c65007c6ac5d1bd1acd465f25701039a36.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-2781d9e9b85283fd4b87564fdbaa212f9b597c32.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8a372c4191f80489770a231f7be4820b204b886a">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-15691d9feccb963e790bfadb74734612b905588e.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-a8cc3c539a61cb5e4eea91c27b3d4de0ae00ff84.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0-11308e606a9d8abb10e52acc3e6abb90abf40b60.jar" />
     </item>
     <item
         jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.2.3/1a0113da2cab5f4c216b4e5e7c1dbfaa67087e14/jackson-core-2.2.3.jar"
@@ -170,11 +163,137 @@
         <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/jackson-core-2.2.3-43930c1dfe1d2c27a4254ef8f0332c3da198e2d5.jar" />
     </item>
     <item
-        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/0.11.0/jars/classes.jar"
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/0.11.0/jars/classes.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="3341b66c54367e777a0647e2db96c045329bfeab">
-        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-a8cc3c539a61cb5e4eea91c27b3d4de0ae00ff84.jar" />
+        sha1="ca63c521b5745ae9a09629d7ca67ff6bc2a967fe">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-e52b6e84c158109cae4dfe7d969782c55bdac8b0.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.4.1/63994437f62bc861bc20c605d12962f7246116d1/okhttp-urlconnection-3.4.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="63994437f62bc861bc20c605d12962f7246116d1">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.4.1-9223921dd89121bc407d01695c25cdda93d5167c.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/javax.inject-1-5ad9d7d8e98c624e3b79c2754ef3008f2036dd64.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1137942adeb03984c1311b662363dd38fc238fd3">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-6157ba908b0e129554b7fef6eea81fd8cdce6c2f.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/0.11.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="98786c1770b531b9194fb6448b2a2692c64074b6">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-6d0bd9ba8df03dd1012340aa9cd40dadb850d0a3.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-ea1378b1bcb232566575afa521651988586949a7.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-0d1f24af975271a32881701aee418e64d3946032.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.4.0/cc174c559b5177982887bf6e1b76003aebad9516/bolts-android-1.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="cc174c559b5177982887bf6e1b76003aebad9516">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/bolts-android-1.4.0-e0d936a24ab031839782f39a53a42f11c09ee5af.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0-908bb92a89f752cf7f1c07b268709f04d1957804.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-4dd174797f3a566377b521df30e644612f2e540b.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/customtabs/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="94ba691efc31bf53264db0716d9c9ec03843ea31">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-578ceb6d9ae7e82e0230608278b087045365b280.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-c8aea21c9b34543eab9d3642986339d721a122f5.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.0.0-75e8cc3348c4ce020923965c3ee322040fa7f2c8.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/okio-1.9.0-f1aafd2870429aee3d7aa7f310a40eb23f5ec5e2.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.39.2/jars/libs/infer-annotations-1.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="5268ed090600db4ceb72b055927f4f9cbd79465c">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/infer-annotations-1.5-d196d734beeec272fcb9d3feca30e0a72f3d3a64.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-dff87bce1402399a7e2fb28188703a5139b2cfd5.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/library-2.4.0-c471524d5ed7103fda3d27ab4eaea5d2c9ae6c01.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/classes-7e150c43eff6ba173ff1f616703d2bee10aa8c39.jar" />
+    </item>
+    <item
+        jar="/home/dipesh/luxury_meets/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/home/dipesh/luxury_meets/android/app/build/intermediates/pre-dexed/debug/internal_impl-25.0.0-4234b3a0928e44d667ed02128c5710263255cdfd.jar" />
     </item>
 
 </items>

@@ -11,6 +11,7 @@ export default class Profiles extends Component {
 	constructor(props){
 		super(props);
 		this.state = {placeholder: true};
+		console.log(this.props);
 	}
 
 	componentDidMount(){
@@ -29,7 +30,7 @@ export default class Profiles extends Component {
 
 	render(){
 		var logo = require('../resources/logo.png');
-		var userImage = require('../resources/user.jpg');
+		var userImage = {uri: this.props.facebookData.profilePicture};
 		if(this.state.placeholder){
 			return this._renderPlaceholder();
 		}
@@ -49,27 +50,27 @@ export default class Profiles extends Component {
 						<Text style={mainStyles.logo}>My Profile</Text>
 						<TouchableHighlight onPress={() => {this._drawer1.open(); }}><View style={mainStyles.navbarTextView}><View style={mainStyles.messageNumber}><Text style={{color: "white", fontSize: 12, padding: 2}}>9+</Text></View><Icon name="comment" size={20} color="#f0c100" /></View></TouchableHighlight>
 					</View>
-					<View style={{flex: 1, backgroundColor: "#292a2b"}}>
-					<ScrollView style={mainStyles.scrollView}>
-						<View style={mainStyles.bottomView}>
-							<Image resizeMode="cover" source={userImage} style={mainStyles.userImage} />
-							<View style={{flex: 1, flexDirection: "row"}}>
-								<Text style={{color: "#f0c100", flex: 0.5, fontSize: 30, padding: 20}}>Angelina, 40</Text>
-								<View style={mainStyles.heartComment}>
-									<Icon name="heart" size={30} style={{color: "#f0c100"}}/>
+					<View style={mainStyles.scrollParent}>
+						<ScrollView style={mainStyles.scrollView}>
+							<View style={mainStyles.bottomView}>
+								<Image resizeMode="cover" source={userImage} style={mainStyles.userImage} />
+								<View style={{flex: 1, flexDirection: "row"}}>
+									<Text style={{color: "#f0c100", flex: 0.5, fontSize: 30, padding: 20}}>{this.props.facebookData.username}, {this.props.facebookData.age}</Text>
+									<View style={mainStyles.heartComment}>
+										<Icon name="heart" size={30} style={{color: "#f0c100"}}/>
+									</View>
+									<View style={mainStyles.heartComment}>
+										<Icon name="comment" size={30} style={{color: "#f0c100"}}/>
+									</View>
 								</View>
-								<View style={mainStyles.heartComment}>
-									<Icon name="comment" size={30} style={{color: "#f0c100"}}/>
+								<View>
+									<Text style={{color: "#f0c100", padding: 20, fontSize: 18}}>About Me:</Text>
+									<Text style={{color: "#ffffff88", paddingLeft: 20, fontSize: 14, textAlign: "justify", lineHeight: 30}}>Angelina Jolie Pitt (/dʒoʊˈliː/ joh-lee; née Voight; born June 4, 1975)[1] is an American actress, filmmaker, and humanitarian. She has received an Academy Award, two Screen Actors Guild Awards, and three Golden Globe Awards, and has been cited as Hollywood's highest-paid actress. Jolie made her screen debut as a child alongside her father, Jon Voight, in Lookin' to Get Out (1982).</Text>
+									<Text style={{color: "#f0c100", padding: 20, fontSize: 18}}>Work:</Text>
+									<Text style={{color: "#fff8", paddingLeft: 20, fontSize: 14, textAlign: "justify", lineHeight: 30}}>Actor, Model</Text>
 								</View>
 							</View>
-							<View>
-								<Text style={{color: "#f0c100", padding: 20, fontSize: 18}}>About Me:</Text>
-								<Text style={{color: "#ffffff88", paddingLeft: 20, fontSize: 14, textAlign: "justify", lineHeight: 30}}>Angelina Jolie Pitt (/dʒoʊˈliː/ joh-lee; née Voight; born June 4, 1975)[1] is an American actress, filmmaker, and humanitarian. She has received an Academy Award, two Screen Actors Guild Awards, and three Golden Globe Awards, and has been cited as Hollywood's highest-paid actress. Jolie made her screen debut as a child alongside her father, Jon Voight, in Lookin' to Get Out (1982).</Text>
-								<Text style={{color: "#f0c100", padding: 20, fontSize: 18}}>Work:</Text>
-								<Text style={{color: "#fff8", paddingLeft: 20, fontSize: 14, textAlign: "justify", lineHeight: 30}}>Actor, Model</Text>
-							</View>
-						</View>
-					</ScrollView>
+						</ScrollView>
 					</View>
 				</View>
 			</Drawer>
@@ -105,6 +106,11 @@ var mainStyles = StyleSheet.create({
 		zIndex: 2,
 		borderRadius: 100,
 		backgroundColor: "red"
+	},
+	scrollParent: {
+		backgroundColor: "#292a2b",
+		paddingBottom: 20,
+		height: Dimensions.get('window').height-93,
 	},
 	logo: {
 		color: "#f0c100",

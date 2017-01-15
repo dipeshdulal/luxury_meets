@@ -11,8 +11,10 @@ export default class SplashScreen extends Component{
 
 	render(){
 		var logo = require('../resources/logo.png');
+		// change to login view to mainscreen if users oauth token is there 
+		// if not then go to login view so that oauth loken could be taken
 		setTimeout(() => {
-			this.props.navigator.resetTo({id: "MainScreen"});
+			this.props.navigator.resetTo({id: "LoginView"});
 		}, 1000);
 		return (
 			<View style={splashStyles.splashView}>

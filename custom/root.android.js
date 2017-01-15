@@ -5,7 +5,7 @@ import MainScreen from './pages/MainScreen.js';
 import Profiles from './pages/Profiles.js';
 import InviteFriends from './pages/InviteFriends.js';
 import Preferences from './pages/Preferences.js';
-
+import LoginView from './pages/LoginView.js';
 export default class Root extends Component {
 	
 	constructor(props){
@@ -19,16 +19,19 @@ export default class Root extends Component {
 				return <SplashScreen navigator={navigator} />
 				break;
 			case "MainScreen":
-				return <MainScreen navigator={navigator} />
+				return <MainScreen navigator={navigator} facebookData={route.user}/>
 				break;
 			case "Profiles":
-				return <Profiles navigator={navigator} />
+				return <Profiles navigator={navigator} facebookData={route.user}/>
 				break;
 			case "InviteFriends":
 				return <InviteFriends navigator={navigator} />
 				break;
 			case "Preferences":
-				return <Preferences navigator={navigator} />
+				return <Preferences navigator={navigator} facebookData={route.user}/>
+				break;
+			case "LoginView":
+				return <LoginView navigator={navigator} />
 				break;
 		}
 	}

@@ -9,10 +9,9 @@ export default class InviteFriends extends Component {
 
 
 	render(){
-		var logo = require('../resources/logo.png');
+		var logo = require('../resources/icon.png');
 		var userImage = require('../resources/user.jpg');
 		return (
-			
 				<Drawer 
 					ref={(ref) => {this._drawer1 = ref}}
 					content={<MessageDrawerContent navigator={this.props.navigator}/>}
@@ -32,7 +31,7 @@ export default class InviteFriends extends Component {
 					<ScrollView style={mainStyles.scrollView}>
 						<View style={mainStyles.bottomView}>
 							<Text style={{color: "#f0c100", paddingTop: 30, paddingBottom: 30, fontSize: 50, textAlign: "center"}}>Invite Friends</Text>
-							<Image />
+							<Image source={logo} style={{height: 300, resizeMode: "contain"}}/>
 							<View style={{flex: 1, flexDirection: "row", padding: 20, position: "relative"}}>
 								<Text title="Facebook" style={{color: "#fff", padding: 20, backgroundColor: "#3b5998", flex: 1, borderRadius: 30, textAlign: "center", fontSize: 20}}>Facebook</Text>
 								<Icon name="facebook-square" style={{color: "#fff", position: "absolute", left: 40, top: 40}} size={30}/>

@@ -6,6 +6,12 @@ import DrawerContent from './DrawerContent';
 import MessageDrawerContent from './MessageDrawerContent';
 import MultiSlider from '@ptomasroos/react-native-multi-slider';
 
+const FBSDK = require('react-native-fbsdk');
+const {
+	LoginButton,
+	AccessToken
+} = FBSDK;
+
 export default class Preferences extends Component {
 
 	constructor(props){
@@ -48,7 +54,11 @@ export default class Preferences extends Component {
 	multiSliderValuesChange(self, values){
 		self.state.ageValue[0] = values[0]*10;
 		self.state.ageValue[1] = values[1]*10;
-		self.setState(self.state);
+		self.setState(this.state);
+	}
+
+	logout(){
+		this.props.navigator.resetTo({id: "LoginView"});
 	}
 
 	render(){
@@ -136,9 +146,12 @@ export default class Preferences extends Component {
 						          style={{marginBottom: 10}}
 						          value={this.state.calls} />
 							</View>
-							<TouchableHighlight onPress={()=>{console.log("logout")}}>
-								<Text style={mainStyles.logoutButton}>Log Out</Text>
-							</TouchableHighlight>
+								<View style={{alignItems: "center", paddingTop: 30}}>
+									<LoginButton
+							          publishPermissions={["publish_actions"]}
+							          onLogoutFinished={this.logout.bind(this)}
+							          onPress={() => {console.log("pressed")}}/>
+								</View>
 						</View>
 					</View>
 				</ScrollView>

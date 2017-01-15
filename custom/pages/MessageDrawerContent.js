@@ -38,6 +38,13 @@ export default class MessageDrawerContent extends Component{
 					message: "Hey Darling",
 					date: "12 May 2016, 12:00 PM"
 				},
+				{ 
+					id: 3,
+					userImage: userImage,
+					sender: "Angelina Jolie",
+					message: "Hey Darling",
+					date: "12 May 2016, 12:00 PM"
+				},
 			]
 		};
 	}
